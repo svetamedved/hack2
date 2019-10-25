@@ -1,13 +1,12 @@
-// import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
-import Container from 'react-bootstrap/Container';
-import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed';
-import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container'
+import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 
 class App extends Component {
   onChangeHandler=event=>{
@@ -18,22 +17,15 @@ class App extends Component {
 
   render() {
     const logoStyle = {
-      marginTop: '100px'
-
+      marginTop: '40px'
     }
-
-    const formStyle = {
-      marginTop: '60px',
-      marginBottom: '100px'
-    }
-
 return (
     <div className="App">
       <header className="App-header">
 
-      <Image style={logoStyle}src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoORr4vgEZxDedLK70T41noCF0xLA96Br_8Qba5m_cAy72kqh5CA" />
+      <Image style={logoStyle} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoORr4vgEZxDedLK70T41noCF0xLA96Br_8Qba5m_cAy72kqh5CA" />
 
-      <Form style={formStyle}>
+      <Form>
         <Form.Group controlId="formBasicName">
           <Form.Label>Name</Form.Label>
           <Form.Control type="text" placeholder="Full Name" />
@@ -59,7 +51,7 @@ return (
 
         <Form.Group controlId="formBasic">
           <Form.Control type="file" name="file" onChange={this.onChangeHandler}/>
-
+          <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
 
         <Button variant="primary" type="submit">
@@ -73,6 +65,5 @@ return (
   );
   }
 }
-
 
 export default App;
