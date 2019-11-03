@@ -5,13 +5,11 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App'
-import Menu from './Menu'
 import Page1 from './Page1'
 
 
 const routing = (
   <Router>
-  	<Menu/>
     <div>
       <Route path="/home" component={App} />
       <Route path="/page1" component={Page1} />
